@@ -27,6 +27,7 @@ repositories {
 
 ext {
 	springCloudVersion = "2025.0.1"
+	otelVersion = "2.4.0"
 	testcontainersVersion = "1.17.3"
 	testKeycloakVersion = "3.3.1"
 }
@@ -43,6 +44,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 
 	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+	runtimeOnly "io.opentelemetry.javaagent:opentelemetry-javaagent:${otelVersion}"
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
